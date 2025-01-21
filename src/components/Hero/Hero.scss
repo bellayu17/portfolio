@@ -4,6 +4,10 @@
 
   background-image: linear-gradient(315deg, #f3e6e8 0%, #d5d0e5 74%);
   text-align: center;
+  height: 100vh; // Make the section a full page height
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media (max-width: 992px) {
     padding-bottom: 120px;
