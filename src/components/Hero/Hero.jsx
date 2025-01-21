@@ -1,9 +1,9 @@
 import "aos/dist/aos.css";
 import React from "react";
-import TypeAnimation from "react-type-animation";
+import { TypeAnimation } from "react-type-animation";
 import "./Hero.scss";
-import heroImage from "../../assets/images/IMG_5196.jpg";
 
+// Use the public directory for better handling of static assets
 const Hero = () => {
   return (
     <main
@@ -24,7 +24,7 @@ const Hero = () => {
             sequence={["Hi, my name is"]}
             wrapper="p"
             repeat={1}
-            className="app__hero-title "
+            className="app__hero-title"
           />
           <TypeAnimation
             cursor={false}
@@ -35,7 +35,7 @@ const Hero = () => {
           />
           <TypeAnimation
             cursor={false}
-            sequence={[3000, "A PM|Entrepreneur|Developer"]}
+            sequence={[3000, "A PM | Entrepreneur | Developer"]}
             wrapper="h2"
             repeat={1}
             className="app__hero-container_text-title"
@@ -52,7 +52,8 @@ const Hero = () => {
           />
         </div>
         <div className="app__hero-container_image">
-          <img src={heroImage} alt="Bella Yu" />
+          {/* Use public directory for images instead of import */}
+          <img src="/images/IMG_5196.JPG" alt="Bella Yu" />
         </div>
       </div>
     </main>
