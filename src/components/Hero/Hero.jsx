@@ -1,10 +1,8 @@
 import "aos/dist/aos.css";
 import React from "react";
 import TypeAnimation from "react-type-animation";
-import profileImage from "../assets/images/me.png";
 import "./Hero.scss";
 
-// Use the public directory for better handling of static assets
 const Hero = () => {
   return (
     <main
@@ -51,9 +49,6 @@ const Hero = () => {
             repeat={1}
             className="app__hero-container_text-subtitle"
           />
-        </div>
-        <div className="app__hero-container_image">
-        <img src={profileImage} alt="Bella Yu" />
         </div>
       </div>
     </main>
