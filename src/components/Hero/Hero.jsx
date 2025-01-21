@@ -1,9 +1,12 @@
 import "aos/dist/aos.css";
 import React from "react";
-import TypeAnimation from "react-type-animation";
+import dynamic from "next/dynamic";
+import Image from "next/image";
 import "./Hero.scss";
 
-// Use the public directory for better handling of static assets
+// Dynamically import TypeAnimation to avoid SSR issues
+const TypeAnimation = dynamic(() => import("react-type-animation"), { ssr: false });
+
 const Hero = () => {
   return (
     <main
@@ -52,8 +55,14 @@ const Hero = () => {
           />
         </div>
         <div className="app__hero-container_image">
-          {/* Use public directory for images instead of import */}
-          <img src="/images/IMG_5196.JPG" alt="Bella Yu" />
+          {/* Using Next.js <Image> for better optimization */}
+          <Image
+            src="/images/IMG_5196.JPG"
+            alt="Bella Yu"
+            width={500}  // Adjust width according to your design
+            height={500} // Adjust height according to your design
+            priority  // Ensures image loads quickly
+          />
         </div>
       </div>
     </main>
