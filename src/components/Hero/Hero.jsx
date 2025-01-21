@@ -1,6 +1,6 @@
 import "aos/dist/aos.css";
 import React from "react";
-import { TypeAnimation } from "react-type-animation";
+import TypeAnimation from "react-type-animation";
 import "./Hero.scss";
 
 // Use the public directory for better handling of static assets
